@@ -1,17 +1,23 @@
-doing the tutorial here: http://net.tutsplus.com/tutorials/intelligent-activerecord-models/ to learn more about making models
+<b>doing the tutorial here:</b>  <tt>http://net.tutsplus.com/tutorials/intelligent-activerecord-models/ to learn more about making models </tt>
 
-Error: application.rb:4:in `require': no such file to load -- sha1 (LoadError)
-fix: changed the require 'sha1' to require 'digest/sha1' in application.rb
+<b>Error:</b>  <tt>application.rb:4:in `require': no such file to load -- sha1 (LoadError) </tt>
+<b>fix:</b> <tt>changed the require 'sha1' to require 'digest/sha1' in application.rb</tt>
 
-Error: Can't mass-assign protected attributes: name, email, password
+<b>Error:</b>  <tt>Can't mass-assign protected attributes: name, email, password
+
 app/controllers/users_controller.rb:43:in `new'
-app/controllers/users_controller.rb:43:in `create'
-fix: make sure attr_accessible :email, :name, :password is at the top of user.rb aand
-make sure attr_accessible :completed_at, :completed_by_id, :name, :started_at, :started_by_id is at the top of project.rb
 
-Error: uninitialized constant User::SHA1
+app/controllers/users_controller.rb:43:in `create'
+
+<b>fix:</b>  <tt>make sure attr_accessible :email, :name, :password is at the top of user.rb and
+make sure attr_accessible :completed_at, :completed_by_id, :name, :started_at, :started_by_id is at the top of project.rb</tt>
+
+<b>Error:</b>  <tt>uninitialized constant User::SHA1
+
 app/models/user.rb:9:in `password='
-app/controllers/users_controller.rb:43:in `new'
-app/controllers/users_controller.rb:43:in `create'
 
-fix: In User.rb changed SHA1::hexdigest(new_password)) to Digest::SHA1.hexdigest(new_password))
+app/controllers/users_controller.rb:43:in `new'
+
+app/controllers/users_controller.rb:43:in `create'</tt>
+
+<b>fix:</b>  <tt>In User.rb changed SHA1::hexdigest(new_password)) to Digest::SHA1.hexdigest(new_password)) </tt>
