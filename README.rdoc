@@ -3,21 +3,21 @@
 <b>Error:</b>  <tt>application.rb:4:in `require': no such file to load -- sha1 (LoadError) </tt>
 <b>fix:</b> <tt>changed the require 'sha1' to require 'digest/sha1' in application.rb</tt>
 
-<b>Error:</b>  <tt>Can't mass-assign protected attributes: name, email, password
+<b>Error:</b>  <tt>Can't mass-assign protected attributes: name, email, password</tt>
 
-app/controllers/users_controller.rb:43:in `new'
+<tt>app/controllers/users_controller.rb:43:in `new'</tt>
 
-app/controllers/users_controller.rb:43:in `create'
+<tt>app/controllers/users_controller.rb:43:in `create'</tt>
 
 <b>fix:</b>  <tt>make sure attr_accessible :email, :name, :password is at the top of user.rb and
 make sure attr_accessible :completed_at, :completed_by_id, :name, :started_at, :started_by_id is at the top of project.rb</tt>
 
-<b>Error:</b>  <tt>uninitialized constant User::SHA1
+<b>Error:</b>  <tt>uninitialized constant User::SHA1</tt>
 
-app/models/user.rb:9:in `password='
+<tt>app/models/user.rb:9:in `password='</tt>
 
-app/controllers/users_controller.rb:43:in `new'
+<tt>app/controllers/users_controller.rb:43:in `new'</tt>
 
-app/controllers/users_controller.rb:43:in `create'</tt>
+<tt>app/controllers/users_controller.rb:43:in `create'</tt>
 
 <b>fix:</b>  <tt>In User.rb changed SHA1::hexdigest(new_password)) to Digest::SHA1.hexdigest(new_password)) </tt>
