@@ -14,6 +14,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
+    # params[:id] is whatever the user
+    # picked from the index
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,12 +37,16 @@ class ProjectsController < ApplicationController
   # GET /projects/1/edit
   def edit
     @project = Project.find(params[:id])
+    # grab all the data for a project based on what the user selected
+    # and display the data in the form 
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(params[:project])
+    # grab all the data the user typed in
+    # to the form from new.html.erb
 
     respond_to do |format|
       if @project.save

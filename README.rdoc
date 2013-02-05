@@ -1,4 +1,6 @@
 <b>doing the tutorial here:</b>  <tt>http://net.tutsplus.com/tutorials/intelligent-activerecord-models/ to learn more about making models </tt>
+
+Here are a few errors I got and how I solved them:
 -----
 <b>Error:</b>  <tt>application.rb:4:in `require': no such file to load -- sha1 (LoadError) </tt>
 <b>fix:</b> <tt>changed the require 'sha1' to require 'digest/sha1' in application.rb</tt>
